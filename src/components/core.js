@@ -256,6 +256,8 @@
 			eventData.parents = element ? getStepParents(element) : null;
 			eventData.current = current;
 			eventData.jmpress = this;
+			eventData.canvas = canvas;
+			eventData.callCallback = callCallback;
 			var result = {};
 			$.each( settings[callbackName], function(idx, callback) {
 				result.value = callback.call( jmpress, element, eventData ) || result.value;
